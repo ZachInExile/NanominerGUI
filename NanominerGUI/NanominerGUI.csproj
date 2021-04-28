@@ -31,6 +31,21 @@
     <None Remove="nvrtc-builtins64_100.dll" />
     <None Remove="nvrtc64_100_0.dll" />
     <None Remove="service.dll" />
+    <None Remove="web\favicon.ico" />
+    <None Remove="web\index.html" />
+    <None Remove="web\static\css\app.aebfe1fde4772b485a6295080e27f80a.css" />
+    <None Remove="web\static\css\app.aebfe1fde4772b485a6295080e27f80a.css.map" />
+    <None Remove="web\static\fonts\Muller\MullerBold.woff" />
+    <None Remove="web\static\fonts\Muller\MullerBold.woff2" />
+    <None Remove="web\static\fonts\Muller\MullerMedium.woff" />
+    <None Remove="web\static\fonts\Muller\MullerMedium.woff2" />
+    <None Remove="web\static\fonts\Muller\stylesheet.css" />
+    <None Remove="web\static\js\app.14bf96e3e5e5d56cd368.js" />
+    <None Remove="web\static\js\app.14bf96e3e5e5d56cd368.js.map" />
+    <None Remove="web\static\js\manifest.2ae2e69a05c33dfc65f8.js" />
+    <None Remove="web\static\js\manifest.2ae2e69a05c33dfc65f8.js.map" />
+    <None Remove="web\static\js\vendor.3efc3c31adef04ef996f.js" />
+    <None Remove="web\static\js\vendor.3efc3c31adef04ef996f.js.map" />
     <None Remove="WinAMDTweak\EIO.dll" />
     <None Remove="WinAMDTweak\IOMap.sys" />
     <None Remove="WinAMDTweak\IOMap64.sys" />
@@ -109,6 +124,51 @@
     </Content>
     <Content Include="service.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\css\app.aebfe1fde4772b485a6295080e27f80a.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\css\app.aebfe1fde4772b485a6295080e27f80a.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\fonts\Muller\MullerBold.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\fonts\Muller\MullerBold.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\fonts\Muller\MullerMedium.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\fonts\Muller\MullerMedium.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\fonts\Muller\stylesheet.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\js\app.14bf96e3e5e5d56cd368.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\js\app.14bf96e3e5e5d56cd368.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\js\manifest.2ae2e69a05c33dfc65f8.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\js\manifest.2ae2e69a05c33dfc65f8.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\js\vendor.3efc3c31adef04ef996f.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\static\js\vendor.3efc3c31adef04ef996f.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="WinAMDTweak\EIO.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
