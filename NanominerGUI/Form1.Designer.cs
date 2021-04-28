@@ -31,12 +31,12 @@ namespace NanominerGUI
         {
             this.textBoxETCAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxRigName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,14 +56,14 @@ namespace NanominerGUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Ethereum Classic (ETC) Address:";
             // 
-            // textBoxEmail
+            // labelEmail
             // 
-            this.textBoxEmail.AutoSize = true;
-            this.textBoxEmail.Location = new System.Drawing.Point(119, 66);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(39, 15);
-            this.textBoxEmail.TabIndex = 2;
-            this.textBoxEmail.Text = "Email:";
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(119, 66);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(39, 15);
+            this.labelEmail.TabIndex = 2;
+            this.labelEmail.Text = "Email:";
             // 
             // textBoxRigName
             // 
@@ -100,13 +100,14 @@ namespace NanominerGUI
             this.buttonStart.TabIndex = 6;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 23);
-            this.textBox1.TabIndex = 7;
+            this.textBoxEmail.Location = new System.Drawing.Point(119, 84);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(198, 23);
+            this.textBoxEmail.TabIndex = 7;
             // 
             // label2
             // 
@@ -123,12 +124,12 @@ namespace NanominerGUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 238);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxRigName);
-            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxETCAddress);
             this.Name = "Form1";
@@ -143,12 +144,12 @@ namespace NanominerGUI
 
         private System.Windows.Forms.TextBox textBoxETCAddress;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label textBoxEmail;
+        private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxRigName;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label2;
     }
 }
