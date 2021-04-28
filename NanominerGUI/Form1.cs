@@ -14,7 +14,7 @@ namespace NanominerGUI
 {
     public partial class Form1 : Form
     {
-        public string thisLoc = Application.StartupPath;
+        public string thisLoc = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
         public string strETCaddress;
 
         public Form1()
@@ -23,12 +23,19 @@ namespace NanominerGUI
         }
         private void form1_Load(object sender, EventArgs e)
         {
-            //testing
+            //----- Testing -----
+            MessageBox.Show(thisLoc);
             textBoxETCAddress.Text = "0x98bdf1563461dca87f6e5fe9e5ad75dc4147b313";
-        }
 
-        private void buttonValidateETC_Click(object sender, EventArgs e)
-        {
+            if (File.Exists("GUIconfig.ini"))
+            {
+                MessageBox.Show("the GUIconfig.ini exists");
+            }
+            else
+            {
+                MessageBox.Show("GUIconfig.ini doesn't exist. i have depression");
+            }
+            //--------------------
         }
     }
 }
