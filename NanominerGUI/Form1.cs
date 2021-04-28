@@ -24,10 +24,10 @@ namespace NanominerGUI
 
         //config.ini variables
         static string strConfigLine1 = "[Etchash]";
-        static string strConfigLine2 = "wallet = ";
-        static string strConfigLine3 = "coin = Etc";
-        static string strConfigLine4 = "rigName = ";
-        static string strConfigLine5 = "email = ";
+        static string strConfigLine2 = "wallet=";
+        static string strConfigLine3 = "coin=Etc";
+        static string strConfigLine4 = "rigName=";
+        static string strConfigLine5 = "email=";
 
         public Form1()
         {
@@ -38,20 +38,7 @@ namespace NanominerGUI
             this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
 
-            //----- Testing -----
-            textBoxETCAddress.Text = "0x98bdf1563461dca87f6e5fe9e5ad75dc4147b313";
-            textBoxRigName.Text = strRigName;
-            textBoxEmail.Text = "email@address";
-
-            if (File.Exists("config.ini"))
-            {
-                Console.Write("FOUND CONFIG.INI");
-            }
-            else
-            {
-                MessageBox.Show("the file doesn't exist. i have depression");
-            }
-            //--------------------
+            LoadSettings();
         }
 
         private void SetVariables()
@@ -88,7 +75,33 @@ namespace NanominerGUI
                 strRigName = textBoxRigName.Text;
             }
         }
+        private void LoadSettings()
+        {
+            string line;
+            try
+            {
+                StreamReader sr = new StreamReader("config.ini");
 
+                line = sr.ReadLine(); //[Etchash] STATIC
+
+                line = sr.ReadLine(); //wallet=12345
+                textBoxETCAddress.Text = line.Replace("wallet=", "");
+
+                line = sr.ReadLine(); //coin=Etc STATIC
+
+                line = sr.ReadLine(); //rigName=rigname
+                textBoxRigName.Text = line.Replace("rigName=", "");
+
+                line = sr.ReadLine(); //email=email@
+                textBoxEmail.Text = line.Replace("email=", "");
+
+                sr.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Exception: " + exception.Message);
+            }
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
             DialogResult dialogresult = MessageBox.Show("Are you sure you want to overwrite your current config.ini with these settings?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -133,29 +146,7 @@ namespace NanominerGUI
             DialogResult dialogresult = MessageBox.Show("Are you sure you want to overwrite your current settings with those in config.ini? (This just reads the config.ini for now, doesn't actually do anything)", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogresult == DialogResult.Yes)
             {
-                string line;
-                try
-                {
-                    //Pass the file path and file name to the StreamReader constructor
-                    StreamReader sr = new StreamReader("config.ini");
-                    //Read the first line of text
-                    line = sr.ReadLine();
-                    //Continue to read until you reach end of file
-                    while (line != null)
-                    {
-                        //write the lie to console window
-                        MessageBox.Show(line);
-                        //Read the next line
-                        line = sr.ReadLine();
-                    }
-                    //close the file
-                    sr.Close();
-                    Console.ReadLine();
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show("Exception: " + exception.Message);
-                }
+                LoadSettings();
             }
         }
 

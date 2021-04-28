@@ -8,10 +8,118 @@
 
   <ItemGroup>
     <None Remove="config.ini" />
+    <None Remove="config_conflux.ini" />
+    <None Remove="config_ctxc.ini" />
+    <None Remove="config_ergo.ini" />
+    <None Remove="config_ergo_zil.ini" />
+    <None Remove="config_etc.ini" />
+    <None Remove="config_eth.ini" />
+    <None Remove="config_eth_zil_merged.ini" />
+    <None Remove="config_eth_zil_split.ini" />
+    <None Remove="config_rvn.ini" />
+    <None Remove="config_verus.ini" />
+    <None Remove="config_xmr.ini" />
+    <None Remove="helper_scripts\cmdline_launcher.bat" />
+    <None Remove="helper_scripts\reboot.bat" />
+    <None Remove="kernel.dat" />
+    <None Remove="licenses\amdmemorytweak-license.txt" />
+    <None Remove="licenses\Bitcoin-license.txt" />
+    <None Remove="licenses\HashLib4CPP-license.txt" />
+    <None Remove="licenses\RandomX-license.txt" />
+    <None Remove="licenses\Terms of Use Nanominer.pdf" />
+    <None Remove="nanominer.exe" />
+    <None Remove="nvrtc-builtins64_100.dll" />
+    <None Remove="nvrtc64_100_0.dll" />
+    <None Remove="service.dll" />
+    <None Remove="WinAMDTweak\EIO.dll" />
+    <None Remove="WinAMDTweak\IOMap.sys" />
+    <None Remove="WinAMDTweak\IOMap64.sys" />
+    <None Remove="WinAMDTweak\WinAMDTweak.exe" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_conflux.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_ctxc.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_ergo.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_ergo_zil.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_etc.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_eth.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_eth_zil_merged.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_eth_zil_split.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_rvn.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_verus.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config_xmr.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="helper_scripts\cmdline_launcher.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="helper_scripts\reboot.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="kernel.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\amdmemorytweak-license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\Bitcoin-license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\HashLib4CPP-license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\RandomX-license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="licenses\Terms of Use Nanominer.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="nanominer.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="nvrtc-builtins64_100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="nvrtc64_100_0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="service.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WinAMDTweak\EIO.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WinAMDTweak\IOMap.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WinAMDTweak\IOMap64.sys">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WinAMDTweak\WinAMDTweak.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
