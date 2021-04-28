@@ -39,6 +39,30 @@ namespace NanominerGUI
             this.MaximumSize = this.Size;
 
             LoadSettings();
+            FirstLaunch();
+        }
+        private void FirstLaunch()
+        {
+            if (File.Exists("launched"))
+            {
+                //Do nothing, since the user has used this app before
+            }
+            else
+            {
+                MessageBox.Show("Thanks for using my program! This is just intended to be a quicker and cleaner way to run Nanominer. I've only programmed this GUI around Nanominer, for issues you'll have to just Google around for Nanominer help. You can get an ETC wallet in a lot of places, I personally use Coinbase. Please note that there's no way to validate that the ETC address you enter is actually yours, so, please double check or you risk mining to someone else's wallet - or nowhere at all. Thanks again! This message won't appear again.", "Welcome!");
+                
+                using (StreamWriter sw = File.CreateText("launched"))
+                {
+                    sw.WriteLine("This file just exists to tell the app that you've used it before.");
+                    sw.WriteLine("There's probably a better way to store variables than by using the existence of a text file, but, I'm not a good programmer.");
+                    sw.WriteLine("Thanks for using my program!");
+                    sw.Close();
+                }
+
+                textBoxEmail.Text = "email@address";
+                textBoxETCAddress.Text = "";
+                textBoxRigName.Text = System.Environment.MachineName;
+            }
         }
 
         private void SetVariables()
@@ -102,43 +126,47 @@ namespace NanominerGUI
                 MessageBox.Show("Exception: " + exception.Message);
             }
         }
+        private void SaveSettings()
+        {
+            if (!File.Exists("config.ini"))
+            {
+                MessageBox.Show("WARNING: Could not find config.ini, double check it exists in the same folder as this exe");
+            }
+            else
+            {
+                SetVariables();
+
+                if (boolValidated)
+                {
+                    try
+                    {
+                        //Pass the filepath and filename to the StreamWriter Constructor
+                        StreamWriter sw = new StreamWriter("config.ini", false);
+                        sw.WriteLine(strConfigLine1);
+                        sw.WriteLine(strConfigLine2 + strETCaddress);
+                        sw.WriteLine(strConfigLine3);
+                        sw.WriteLine(strConfigLine4 + strRigName);
+                        sw.WriteLine(strConfigLine5 + strEmail);
+                        //Close the file
+                        sw.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Exception: " + exception.Message);
+                    }
+                    finally
+                    {
+                        MessageBox.Show("Saved");
+                    }
+                }
+            }
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
             DialogResult dialogresult = MessageBox.Show("Are you sure you want to overwrite your current config.ini with these settings?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogresult == DialogResult.Yes)
             {
-                if (!File.Exists("config.ini"))
-                {
-                    MessageBox.Show("WARNING: Could not find config.ini, double check it exists in the same folder as this exe");
-                }
-                else
-                {
-                    SetVariables();
-
-                    if (boolValidated)
-                    {
-                        try
-                        {
-                            //Pass the filepath and filename to the StreamWriter Constructor
-                            StreamWriter sw = new StreamWriter("config.ini", false);
-                            sw.WriteLine(strConfigLine1);
-                            sw.WriteLine(strConfigLine2 + strETCaddress);
-                            sw.WriteLine(strConfigLine3);
-                            sw.WriteLine(strConfigLine4 + strRigName);
-                            sw.WriteLine(strConfigLine5 + strEmail);
-                            //Close the file
-                            sw.Close();
-                        }
-                        catch (Exception exception)
-                        {
-                            MessageBox.Show("Exception: " + exception.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("Saved");
-                        }
-                    }
-                }
+                SaveSettings();
             }
         }
         private void buttonLoad_Click(object sender, EventArgs e)
@@ -154,8 +182,10 @@ namespace NanominerGUI
         {
             if (File.Exists("nanominer.exe"))
             {
-                MessageBox.Show("nanominer.exe found");
-                //Process.Start("nanominer.exe");
+                SaveSettings();
+                Process.Start("nanominer.exe");
+                MessageBox.Show("You can track your balance and change your minimum payout (your password is the email you provided) at https://etc.nanopool.org/account/" + strETCaddress, "Running", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {

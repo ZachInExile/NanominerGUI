@@ -59,7 +59,7 @@ namespace NanominerGUI
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(119, 66);
+            this.labelEmail.Location = new System.Drawing.Point(12, 119);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(39, 15);
             this.labelEmail.TabIndex = 2;
@@ -69,12 +69,12 @@ namespace NanominerGUI
             // 
             this.textBoxRigName.Location = new System.Drawing.Point(12, 84);
             this.textBoxRigName.Name = "textBoxRigName";
-            this.textBoxRigName.Size = new System.Drawing.Size(101, 23);
+            this.textBoxRigName.Size = new System.Drawing.Size(305, 23);
             this.textBoxRigName.TabIndex = 3;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(12, 126);
+            this.buttonSave.Location = new System.Drawing.Point(12, 193);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(101, 47);
             this.buttonSave.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace NanominerGUI
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(12, 179);
+            this.buttonLoad.Location = new System.Drawing.Point(12, 246);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(101, 47);
             this.buttonLoad.TabIndex = 5;
@@ -94,7 +94,7 @@ namespace NanominerGUI
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(119, 126);
+            this.buttonStart.Location = new System.Drawing.Point(119, 193);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(198, 100);
             this.buttonStart.TabIndex = 6;
@@ -104,9 +104,9 @@ namespace NanominerGUI
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(119, 84);
+            this.textBoxEmail.Location = new System.Drawing.Point(12, 137);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(198, 23);
+            this.textBoxEmail.Size = new System.Drawing.Size(305, 23);
             this.textBoxEmail.TabIndex = 7;
             // 
             // label2
@@ -122,7 +122,7 @@ namespace NanominerGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 238);
+            this.ClientSize = new System.Drawing.Size(329, 305);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.buttonStart);
