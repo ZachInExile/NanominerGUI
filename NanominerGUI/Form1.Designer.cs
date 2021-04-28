@@ -31,11 +31,13 @@ namespace NanominerGUI
         {
             this.textBoxETCAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.Label();
+            this.textBoxRigName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxETCAddress
@@ -54,21 +56,21 @@ namespace NanominerGUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Ethereum Classic (ETC) Address:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Email:";
-            // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(12, 84);
+            this.textBoxEmail.AutoSize = true;
+            this.textBoxEmail.Location = new System.Drawing.Point(119, 66);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(305, 23);
-            this.textBoxEmail.TabIndex = 3;
+            this.textBoxEmail.Size = new System.Drawing.Size(39, 15);
+            this.textBoxEmail.TabIndex = 2;
+            this.textBoxEmail.Text = "Email:";
+            // 
+            // textBoxRigName
+            // 
+            this.textBoxRigName.Location = new System.Drawing.Point(12, 84);
+            this.textBoxRigName.Name = "textBoxRigName";
+            this.textBoxRigName.Size = new System.Drawing.Size(101, 23);
+            this.textBoxRigName.TabIndex = 3;
             // 
             // buttonSave
             // 
@@ -78,6 +80,7 @@ namespace NanominerGUI
             this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Save to File";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonLoad
             // 
@@ -87,6 +90,7 @@ namespace NanominerGUI
             this.buttonLoad.TabIndex = 5;
             this.buttonLoad.Text = "Load from File";
             this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // buttonStart
             // 
@@ -97,16 +101,34 @@ namespace NanominerGUI
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(119, 84);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(198, 23);
+            this.textBox1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Rig Name:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 238);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.textBoxRigName);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxETCAddress);
             this.Name = "Form1";
@@ -121,11 +143,13 @@ namespace NanominerGUI
 
         private System.Windows.Forms.TextBox textBoxETCAddress;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxRigName;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
