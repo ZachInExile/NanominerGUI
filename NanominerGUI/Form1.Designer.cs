@@ -38,6 +38,19 @@ namespace NanominerGUI
             this.buttonStart = new System.Windows.Forms.Button();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxETH = new System.Windows.Forms.CheckBox();
+            this.checkBoxERG = new System.Windows.Forms.CheckBox();
+            this.checkBoxCFX = new System.Windows.Forms.CheckBox();
+            this.checkBoxRVN = new System.Windows.Forms.CheckBox();
+            this.checkBoxUBQ = new System.Windows.Forms.CheckBox();
+            this.checkBoxETC = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxXMR = new System.Windows.Forms.CheckBox();
+            this.checkBoxVRSC = new System.Windows.Forms.CheckBox();
+            this.checkBoxNanopool = new System.Windows.Forms.CheckBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxETCAddress
@@ -118,11 +131,140 @@ namespace NanominerGUI
             this.label2.TabIndex = 8;
             this.label2.Text = "Rig Name:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBoxVRSC);
+            this.groupBox1.Controls.Add(this.checkBoxXMR);
+            this.groupBox1.Controls.Add(this.checkBoxETH);
+            this.groupBox1.Controls.Add(this.checkBoxERG);
+            this.groupBox1.Controls.Add(this.checkBoxCFX);
+            this.groupBox1.Controls.Add(this.checkBoxRVN);
+            this.groupBox1.Controls.Add(this.checkBoxUBQ);
+            this.groupBox1.Controls.Add(this.checkBoxETC);
+            this.groupBox1.Location = new System.Drawing.Point(333, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 175);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Coin";
+            // 
+            // checkBoxETH
+            // 
+            this.checkBoxETH.AutoSize = true;
+            this.checkBoxETH.Enabled = false;
+            this.checkBoxETH.Location = new System.Drawing.Point(6, 97);
+            this.checkBoxETH.Name = "checkBoxETH";
+            this.checkBoxETH.Size = new System.Drawing.Size(47, 19);
+            this.checkBoxETH.TabIndex = 5;
+            this.checkBoxETH.Text = "ETH";
+            this.checkBoxETH.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxERG
+            // 
+            this.checkBoxERG.AutoSize = true;
+            this.checkBoxERG.Enabled = false;
+            this.checkBoxERG.Location = new System.Drawing.Point(6, 47);
+            this.checkBoxERG.Name = "checkBoxERG";
+            this.checkBoxERG.Size = new System.Drawing.Size(47, 19);
+            this.checkBoxERG.TabIndex = 4;
+            this.checkBoxERG.Text = "ERG";
+            this.checkBoxERG.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCFX
+            // 
+            this.checkBoxCFX.AutoSize = true;
+            this.checkBoxCFX.Enabled = false;
+            this.checkBoxCFX.Location = new System.Drawing.Point(6, 22);
+            this.checkBoxCFX.Name = "checkBoxCFX";
+            this.checkBoxCFX.Size = new System.Drawing.Size(47, 19);
+            this.checkBoxCFX.TabIndex = 3;
+            this.checkBoxCFX.Text = "CFX";
+            this.checkBoxCFX.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxRVN
+            // 
+            this.checkBoxRVN.AutoSize = true;
+            this.checkBoxRVN.Enabled = false;
+            this.checkBoxRVN.Location = new System.Drawing.Point(6, 122);
+            this.checkBoxRVN.Name = "checkBoxRVN";
+            this.checkBoxRVN.Size = new System.Drawing.Size(49, 19);
+            this.checkBoxRVN.TabIndex = 2;
+            this.checkBoxRVN.Text = "RVN";
+            this.checkBoxRVN.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxUBQ
+            // 
+            this.checkBoxUBQ.AutoSize = true;
+            this.checkBoxUBQ.Enabled = false;
+            this.checkBoxUBQ.Location = new System.Drawing.Point(6, 147);
+            this.checkBoxUBQ.Name = "checkBoxUBQ";
+            this.checkBoxUBQ.Size = new System.Drawing.Size(50, 19);
+            this.checkBoxUBQ.TabIndex = 1;
+            this.checkBoxUBQ.Text = "UBQ";
+            this.checkBoxUBQ.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxETC
+            // 
+            this.checkBoxETC.AutoSize = true;
+            this.checkBoxETC.Checked = true;
+            this.checkBoxETC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxETC.Enabled = false;
+            this.checkBoxETC.Location = new System.Drawing.Point(6, 72);
+            this.checkBoxETC.Name = "checkBoxETC";
+            this.checkBoxETC.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxETC.TabIndex = 0;
+            this.checkBoxETC.Text = "ETC";
+            this.checkBoxETC.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkBoxNanopool);
+            this.groupBox2.Location = new System.Drawing.Point(333, 193);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(225, 103);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Options";
+            // 
+            // checkBoxXMR
+            // 
+            this.checkBoxXMR.AutoSize = true;
+            this.checkBoxXMR.Enabled = false;
+            this.checkBoxXMR.Location = new System.Drawing.Point(136, 22);
+            this.checkBoxXMR.Name = "checkBoxXMR";
+            this.checkBoxXMR.Size = new System.Drawing.Size(85, 19);
+            this.checkBoxXMR.TabIndex = 11;
+            this.checkBoxXMR.Text = "XMR (CPU)";
+            this.checkBoxXMR.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxVRSC
+            // 
+            this.checkBoxVRSC.AutoSize = true;
+            this.checkBoxVRSC.Enabled = false;
+            this.checkBoxVRSC.Location = new System.Drawing.Point(136, 47);
+            this.checkBoxVRSC.Name = "checkBoxVRSC";
+            this.checkBoxVRSC.Size = new System.Drawing.Size(88, 19);
+            this.checkBoxVRSC.TabIndex = 11;
+            this.checkBoxVRSC.Text = "VRSC (CPU)";
+            this.checkBoxVRSC.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNanopool
+            // 
+            this.checkBoxNanopool.AutoSize = true;
+            this.checkBoxNanopool.Location = new System.Drawing.Point(6, 15);
+            this.checkBoxNanopool.Name = "checkBoxNanopool";
+            this.checkBoxNanopool.Size = new System.Drawing.Size(188, 19);
+            this.checkBoxNanopool.TabIndex = 11;
+            this.checkBoxNanopool.Text = "Open Nanopool site on launch";
+            this.checkBoxNanopool.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 305);
+            this.ClientSize = new System.Drawing.Size(573, 305);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.buttonStart);
@@ -135,6 +277,10 @@ namespace NanominerGUI
             this.Name = "Form1";
             this.Text = "Nanominer GUI by Zachonite";
             this.Load += new System.EventHandler(this.form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +297,17 @@ namespace NanominerGUI
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBoxETH;
+        private System.Windows.Forms.CheckBox checkBoxERG;
+        private System.Windows.Forms.CheckBox checkBoxCFX;
+        private System.Windows.Forms.CheckBox checkBoxRVN;
+        private System.Windows.Forms.CheckBox checkBoxUBQ;
+        private System.Windows.Forms.CheckBox checkBoxETC;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkBoxVRSC;
+        private System.Windows.Forms.CheckBox checkBoxXMR;
+        private System.Windows.Forms.CheckBox checkBoxNanopool;
     }
 }
 
