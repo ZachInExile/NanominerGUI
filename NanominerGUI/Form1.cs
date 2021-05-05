@@ -48,9 +48,7 @@ namespace NanominerGUI
                 //Do nothing, since the user has used this app before
             }
             else
-            {
-                MessageBox.Show("Thanks for using my program! This is just intended to be a quicker and cleaner way to run Nanominer. I've only programmed this GUI around Nanominer, for issues you'll have to just Google around for Nanominer help. You can get an ETC wallet in a lot of places, I personally use Coinbase. Please note that there's no way to validate that the ETC address you enter is actually yours, so, please double check or you risk mining to someone else's wallet - or nowhere at all. Thanks again! This message won't appear again.", "Welcome!");
-                
+            {               
                 using (StreamWriter sw = File.CreateText("launched"))
                 {
                     sw.WriteLine("This file just exists to tell the app that you've used it before.");
@@ -58,7 +56,6 @@ namespace NanominerGUI
                     sw.WriteLine("Thanks for using my program!");
                     sw.Close();
                 }
-
                 textBoxEmail.Text = "email@address";
                 textBoxETCAddress.Text = "";
                 textBoxRigName.Text = System.Environment.MachineName;
@@ -184,7 +181,10 @@ namespace NanominerGUI
             {
                 SaveSettings();
                 Process.Start("nanominer.exe");
-                MessageBox.Show("You can track your balance and change your minimum payout (your password is the email you provided) at https://etc.nanopool.org/account/" + strETCaddress, "Running", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkBoxNanopool.Checked)
+                {
+                    System.Diagnostics.Process.Start("https://etc.nanopool.org/account/" + strETCaddress);
+                }
                 this.Close();
             }
             else
