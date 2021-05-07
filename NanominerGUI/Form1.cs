@@ -168,7 +168,7 @@ namespace NanominerGUI
         }
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            DialogResult dialogresult = MessageBox.Show("Are you sure you want to overwrite your current settings with those in config.ini? (This just reads the config.ini for now, doesn't actually do anything)", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogresult = MessageBox.Show("Are you sure you want to overwrite your current settings with those in config.ini?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogresult == DialogResult.Yes)
             {
                 LoadSettings();
