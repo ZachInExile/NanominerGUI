@@ -39,6 +39,8 @@ namespace NanominerGUI
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxVRSC = new System.Windows.Forms.CheckBox();
+            this.checkBoxXMR = new System.Windows.Forms.CheckBox();
             this.checkBoxETH = new System.Windows.Forms.CheckBox();
             this.checkBoxERG = new System.Windows.Forms.CheckBox();
             this.checkBoxCFX = new System.Windows.Forms.CheckBox();
@@ -46,8 +48,7 @@ namespace NanominerGUI
             this.checkBoxUBQ = new System.Windows.Forms.CheckBox();
             this.checkBoxETC = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBoxXMR = new System.Windows.Forms.CheckBox();
-            this.checkBoxVRSC = new System.Windows.Forms.CheckBox();
+            this.checkBoxMonitor = new System.Windows.Forms.CheckBox();
             this.checkBoxNanopool = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,6 +149,28 @@ namespace NanominerGUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Coin";
             // 
+            // checkBoxVRSC
+            // 
+            this.checkBoxVRSC.AutoSize = true;
+            this.checkBoxVRSC.Enabled = false;
+            this.checkBoxVRSC.Location = new System.Drawing.Point(136, 47);
+            this.checkBoxVRSC.Name = "checkBoxVRSC";
+            this.checkBoxVRSC.Size = new System.Drawing.Size(88, 19);
+            this.checkBoxVRSC.TabIndex = 11;
+            this.checkBoxVRSC.Text = "VRSC (CPU)";
+            this.checkBoxVRSC.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxXMR
+            // 
+            this.checkBoxXMR.AutoSize = true;
+            this.checkBoxXMR.Enabled = false;
+            this.checkBoxXMR.Location = new System.Drawing.Point(136, 22);
+            this.checkBoxXMR.Name = "checkBoxXMR";
+            this.checkBoxXMR.Size = new System.Drawing.Size(85, 19);
+            this.checkBoxXMR.TabIndex = 11;
+            this.checkBoxXMR.Text = "XMR (CPU)";
+            this.checkBoxXMR.UseVisualStyleBackColor = true;
+            // 
             // checkBoxETH
             // 
             this.checkBoxETH.AutoSize = true;
@@ -218,6 +241,7 @@ namespace NanominerGUI
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBoxMonitor);
             this.groupBox2.Controls.Add(this.checkBoxNanopool);
             this.groupBox2.Location = new System.Drawing.Point(333, 193);
             this.groupBox2.Name = "groupBox2";
@@ -226,27 +250,15 @@ namespace NanominerGUI
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Options";
             // 
-            // checkBoxXMR
+            // checkBoxMonitor
             // 
-            this.checkBoxXMR.AutoSize = true;
-            this.checkBoxXMR.Enabled = false;
-            this.checkBoxXMR.Location = new System.Drawing.Point(136, 22);
-            this.checkBoxXMR.Name = "checkBoxXMR";
-            this.checkBoxXMR.Size = new System.Drawing.Size(85, 19);
-            this.checkBoxXMR.TabIndex = 11;
-            this.checkBoxXMR.Text = "XMR (CPU)";
-            this.checkBoxXMR.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxVRSC
-            // 
-            this.checkBoxVRSC.AutoSize = true;
-            this.checkBoxVRSC.Enabled = false;
-            this.checkBoxVRSC.Location = new System.Drawing.Point(136, 47);
-            this.checkBoxVRSC.Name = "checkBoxVRSC";
-            this.checkBoxVRSC.Size = new System.Drawing.Size(88, 19);
-            this.checkBoxVRSC.TabIndex = 11;
-            this.checkBoxVRSC.Text = "VRSC (CPU)";
-            this.checkBoxVRSC.UseVisualStyleBackColor = true;
+            this.checkBoxMonitor.AutoSize = true;
+            this.checkBoxMonitor.Location = new System.Drawing.Point(6, 42);
+            this.checkBoxMonitor.Name = "checkBoxMonitor";
+            this.checkBoxMonitor.Size = new System.Drawing.Size(184, 19);
+            this.checkBoxMonitor.TabIndex = 12;
+            this.checkBoxMonitor.Text = "Open Web Monitor on launch";
+            this.checkBoxMonitor.UseVisualStyleBackColor = true;
             // 
             // checkBoxNanopool
             // 
@@ -275,7 +287,7 @@ namespace NanominerGUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxETCAddress);
             this.Name = "Form1";
-            this.Text = "Nanominer GUI by Zachonite";
+            this.Text = "Nanominer GUI";
             this.Load += new System.EventHandler(this.form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -308,6 +320,7 @@ namespace NanominerGUI
         private System.Windows.Forms.CheckBox checkBoxVRSC;
         private System.Windows.Forms.CheckBox checkBoxXMR;
         private System.Windows.Forms.CheckBox checkBoxNanopool;
+        private System.Windows.Forms.CheckBox checkBoxMonitor;
     }
 }
 

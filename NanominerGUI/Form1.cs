@@ -185,6 +185,10 @@ namespace NanominerGUI
                 {
                     System.Diagnostics.Process.Start("https://etc.nanopool.org/account/" + strETCaddress);
                 }
+                if (checkBoxMonitor.Checked)
+                {
+                    System.Diagnostics.Process.Start("127.0.0.1:9090/#/");
+                }
                 this.Close();
             }
             else
