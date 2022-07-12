@@ -193,7 +193,7 @@ namespace NanominerGUI
             }
             else
             {
-                MessageBox.Show("nanominer.exe NOT FOUND :( SAD DAY TO BE ALIVE");
+                MessageBox.Show("Nanominer.exe was not found. Most likely, your antivirus detected it as an unwanted crypto miner and deleted the executable.");
             }
         }
     }
